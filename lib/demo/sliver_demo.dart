@@ -18,7 +18,6 @@ class SliverDemo extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               title: Text('i have a dream'.toUpperCase(),
                 style: TextStyle(
-                  
                   fontSize: 15.0,
                   letterSpacing: 3.0,
                   fontWeight: FontWeight.w400

@@ -10,6 +10,9 @@ import './demo/layout_demo.dart';
 import 'package:chenchen_demo/demo/view_demo.dart';
 import './demo/sliver_demo.dart';
 import 'package:flutter/rendering.dart';
+import './demo/material_components.dart';
+
+
 // import './demo/navigator_demo.dart';
 import './demo/navigator_demo.dart' as prefix;
 void main() => runApp(App());
@@ -31,11 +34,12 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: Home(),
-      initialRoute: '/',
+      initialRoute: '/mdc',
       routes: {
-        '/': (context) => FormDemo(),
+        '/': (context) => Home(),
         '/about': (context) => prefix.Page(title: '定义了一个路由'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
       // 对主题进行设置
       theme: ThemeData(

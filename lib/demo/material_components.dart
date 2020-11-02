@@ -1,10 +1,14 @@
 import 'package:chenchen_demo/demo/datetime_demo.dart';
+import 'package:chenchen_demo/demo/expansion_panel_demo.dart';
 import 'package:chenchen_demo/demo/popup_menu_button_demo.dart';
 import 'package:chenchen_demo/demo/radio_demo.dart';
 import 'package:chenchen_demo/demo/slider_demo.dart';
+import 'package:chenchen_demo/demo/snack_bar_demo.dart';
 import 'package:chenchen_demo/demo/switch_demo.dart';
 import 'package:flutter/material.dart';
 import '../demo/button_demo.dart';
+import 'bottom_sheet_demo.dart';
+import 'dialog_demo.dart';
 import 'form_demo.dart';
 import 'checkbox_demo.dart';
 class MaterialComponents extends StatelessWidget {
@@ -56,13 +60,31 @@ class MaterialComponents extends StatelessWidget {
             title: '来，让我们见识一下国际化组件',
             page: DatetimeDemo(),
           ),
+          ListItem(
+            title: '可爱的对话框框😊',
+            page: SimpleDialogDemo(),
+          ),
+          ListItem(
+            title: '这个叫做底部对话框',
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'SnackBar展示',
+            page: SnackBarDemo(),
+          ),
+          ListItem(
+            title: '伸缩面板',
+            page: ExpansionPanelDemo(),
+          ),
+          ListItem(
+            title: 'chip小碎片',
+            page: ExpansionPanelDemo(),
+          ),
         ],
       ),
     );
   }
 }
-
-
 
 class _WidgetDemo extends StatelessWidget {
   @override

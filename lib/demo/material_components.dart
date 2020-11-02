@@ -1,6 +1,12 @@
+import 'package:chenchen_demo/demo/datetime_demo.dart';
 import 'package:chenchen_demo/demo/popup_menu_button_demo.dart';
+import 'package:chenchen_demo/demo/radio_demo.dart';
+import 'package:chenchen_demo/demo/slider_demo.dart';
+import 'package:chenchen_demo/demo/switch_demo.dart';
 import 'package:flutter/material.dart';
 import '../demo/button_demo.dart';
+import 'form_demo.dart';
+import 'checkbox_demo.dart';
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,6 +28,34 @@ class MaterialComponents extends StatelessWidget {
             title: 'PopupMenuButton',
             page: PopupMenuButtonDemo(),
           ),
+          ListItem(
+            title: 'Form',
+            page: FormDemo(),
+          ),
+          ListItem(
+            title: 'CheckBox',
+            page: CheckboxDemo(),
+          ),
+          ListItem(
+            title: '下面我要用中文，哼😠',
+            page: CheckboxDemo(),
+          ),
+          ListItem(
+            title: '来，让我们见识一下单选框',
+            page: RadioDemo(),
+          ),
+          ListItem(
+            title: '来，让我们见识一下开关',
+            page: SwitchDemo(),
+          ),
+          ListItem(
+            title: '来，让我们见识一下滑动选择器',
+            page: SliderDemo(),
+          ),
+          ListItem(
+            title: '来，让我们见识一下国际化组件',
+            page: DatetimeDemo(),
+          ),
         ],
       ),
     );
@@ -42,7 +76,14 @@ class _WidgetDemo extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+
+              ],
+            )
+          ],
         ),
       ),
     );
@@ -87,12 +128,12 @@ class FloatingActionButtonDemo extends StatelessWidget {
   }
 }
 
+
+/* 构建视图列表 点击 跳转进新的页面 */
 class ListItem extends StatelessWidget {
   final String title;
   final Widget page;
-
   ListItem({this.title, this.page});
-
   @override
   Widget build(BuildContext context) {
     return ListTile(

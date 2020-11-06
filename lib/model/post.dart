@@ -1,14 +1,14 @@
 class Post {
-  const Post({
+  Post({
     this.title,
     this.author,
-    this.imageUrl
+    this.imageUrl,
   });
   final String title;
   final String author;
   final String imageUrl;
+  bool selected = false;
 }
-
 final List<Post> posts = [
   Post(
     title: 'Happy Day',

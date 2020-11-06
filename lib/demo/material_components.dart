@@ -1,9 +1,14 @@
+import 'package:chenchen_demo/demo/card_demo.dart';
+import 'package:chenchen_demo/demo/chip_demo.dart';
+import 'package:chenchen_demo/demo/data_table_demo.dart';
 import 'package:chenchen_demo/demo/datetime_demo.dart';
 import 'package:chenchen_demo/demo/expansion_panel_demo.dart';
+import 'package:chenchen_demo/demo/paginated_data_table_demo.dart';
 import 'package:chenchen_demo/demo/popup_menu_button_demo.dart';
 import 'package:chenchen_demo/demo/radio_demo.dart';
 import 'package:chenchen_demo/demo/slider_demo.dart';
 import 'package:chenchen_demo/demo/snack_bar_demo.dart';
+import 'package:chenchen_demo/demo/stepper_demo.dart';
 import 'package:chenchen_demo/demo/switch_demo.dart';
 import 'package:flutter/material.dart';
 import '../demo/button_demo.dart';
@@ -11,6 +16,7 @@ import 'bottom_sheet_demo.dart';
 import 'dialog_demo.dart';
 import 'form_demo.dart';
 import 'checkbox_demo.dart';
+
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -78,7 +84,23 @@ class MaterialComponents extends StatelessWidget {
           ),
           ListItem(
             title: 'chip小碎片',
-            page: ExpansionPanelDemo(),
+            page: ChipDemo(),
+          ),
+          ListItem(
+            title: '日期表格',
+            page: DataTableDemo(),
+          ),
+          ListItem(
+            title: '日期表格',
+            page: PaginatedDataTableDemo(),
+          ),
+          ListItem(
+            title: '卡片显示',
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: '步骤显示',
+            page: StepperDemo(),
           ),
         ],
       ),
@@ -101,9 +123,7 @@ class _WidgetDemo extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-
-              ],
+              children: [],
             )
           ],
         ),
@@ -123,11 +143,9 @@ class FloatingActionButtonDemo extends StatelessWidget {
         // borderRadius: BorderRadius.circular(10)
         ),
   );
-
   /* 定义带文字形式的floatringActionButton */
   final Widget _floatingActionButtonExtend = FloatingActionButton.extended(
       onPressed: () {}, icon: Icon(Icons.add), label: Text('那岂不是使劲加'));
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -149,7 +167,6 @@ class FloatingActionButtonDemo extends StatelessWidget {
     );
   }
 }
-
 
 /* 构建视图列表 点击 跳转进新的页面 */
 class ListItem extends StatelessWidget {

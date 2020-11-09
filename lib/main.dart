@@ -1,5 +1,6 @@
 // import 'package:chenchen_demo/page/home.dart';
 import 'package:chenchen_demo/demo/form_demo.dart';
+import 'package:chenchen_demo/demo/state/state_management_demo.dart';
 import 'package:flutter/material.dart';
 import 'package:chenchen_demo/demo/listViewDemo.dart';
 import 'package:chenchen_demo/demo/hello-demo.dart';
@@ -34,12 +35,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: Home(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-management',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => prefix.Page(title: '定义了一个路由'),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
+        '/state-management':(context) => StateManagementDemo(),
       },
       // 对主题进行设置
       theme: ThemeData(
